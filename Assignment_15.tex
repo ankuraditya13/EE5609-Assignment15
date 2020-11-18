@@ -1,0 +1,194 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment-15}
+\author{Ankur Aditya - EE20RESCH11010}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document contains the problem related to Linear Transformations (Hoffman:- Page-111,Q-1a) 
+\end{abstract}
+Download the latex-file from 
+\begin{lstlisting}
+https://github.com/ankuraditya13/EE5609-Assignment15
+\end{lstlisting}
+
+\section{Problem}
+Let n be a positive integer and $\vec{F}$ a field. let $\vec{W}$ be the set of all vectors $\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} \in \vec{F}^n$ such that $\vec{x_1}+\vec{x_2}+\vec{x_3}+\cdots \vec{x_n} = 0$. Prove that $\vec{W}^0$ consists of all linear functional f of the form
+\begin{align}
+f\myvec{\vec{x_1},&\vec{x_2}&,\cdots &,\vec{x_n}} = c\sum_{j=1}^{n}\vec{x_j}
+\end{align}
+\section{Definitions}
+\subsection{Definition 1}
+If the vector space $\vec{V}$ is finite dimensional (say dimension =n), the dimension of null-space $\vec{N}_f$ by rank nullity theorem is given by,
+\begin{align}
+\abs{\vec{N}_f}  = \abs{\vec{V}} - 1 = n - 1
+\end{align}  
+\subsection{Definition 2}
+If $\vec{V}$ is a vector space over the field $\vec{F}$ and $\vec{S}$ is a subset of $\vec{V}$, the annihilator of $\vec{S}$ is the set $\vec{S}^0$ of linear functional f on $\vec{V}$ such that $f(\alpha) = 0$ for every $\alpha$ in $\vec{S}$. 
+\section{Solution}
+Let h be the functional,
+\begin{align}
+h\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} = \vec{x_1}+\vec{x_2}+\cdots \vec{x_n}\\
+\implies h\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} = 0
+\end{align}
+Then $\vec{W}$ is in null-space of h. Hence by definition-1, the dimension of $\vec{W}$ is,
+\begin{align}
+\abs{W} = n - 1
+\label{dim}
+\end{align}
+Now let, 
+\begin{align}
+a_j = \epsilon_1-\epsilon_{i+1}, \mbox{ for } i = (1,\cdots ,n-1)
+\label{aj} 
+\end{align}
+Hence clearly $\{a_1, a_2, \cdots, a_{n-1}\}$ are linearly independent. Hence from \eqref{dim} and above statement we can conclude that $\{a_1, a_2, \cdots, a_{n-1}\}$ are all in $\vec{W}$ so they must form basis for $\vec{W}$. Now, it is given that f is linear functional hence,
+\begin{align}
+f\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} = \sum_{j=1}^{n}c_j\vec{x_j}
+\end{align}
+\begin{align}
+\implies f\myvec{\vec{x_1}&\cdots &,\vec{x_n}} = c_1\vec{x_1} + \cdots + c_n\vec{x_n}
+\end{align}
+Now $f \in \vec{W}^0$ from definition-2 is given as,
+\begin{align}
+f(a_1) = f(a_2) = \cdots = f(a_n) = 0 \mbox{ for every } a_j \in \vec{W}
+\end{align}
+Hence,
+\begin{align}
+\implies c_1 - c_i = 0 \forall i= 2\cdots n\\
+\implies c_i = c_1 = c \forall i
+\end{align}
+Hence,
+\begin{align}
+f\myvec{\vec{x_1}&\cdots &,\vec{x_n}} = c\vec{x_1} + c\vec{x_2} + \cdots + c\vec{x_n}
+\end{align}
+\begin{align}
+\implies f\myvec{\vec{x_1},&\vec{x_2}&,\cdots &,\vec{x_n}} = c\sum_{j=1}^{n}\vec{x_j}
+\end{align}
+\end{document}
