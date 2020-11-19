@@ -160,7 +160,7 @@ h\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} = \vec{x_1}+\vec{x_2}+\cdots \ve
 \mbox{Let, } \vec{X} = \myvec{\vec{x_1}\\\vec{x_2}\\\vdots\\\vec{x_n}}
 \end{align}
 \begin{align}
-\implies h\brak{\vec{X}^T} = 0
+\implies h\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} = 0
 \end{align}
 Then $\vec{W}$ is in null-space of h. Hence by definition-1, the dimension of $\vec{W}$ is,
 \begin{align}
@@ -174,10 +174,10 @@ a_j = \epsilon_1-\epsilon_{i+1}, \mbox{ for } i = (1,\cdots ,n-1)
 \end{align}
 Hence clearly $\{a_1, a_2, \cdots, a_{n-1}\}$ are linearly independent. Hence from \eqref{dim} and above statement we can conclude that $\{a_1, a_2, \cdots, a_{n-1}\}$ are all in $\vec{W}$ so they must form basis for $\vec{W}$. Now, it is given that f is linear functional hence,
 \begin{align}
-f\brak{\vec{X}^T} = \sum_{j=1}^{n}c_j\vec{x_j}
+f\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} = \sum_{j=1}^{n}c_j\vec{x_j}
 \end{align}
 \begin{align}
-\implies f\brak{\vec{X}^T} = C^T\vec{X}
+\implies f\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} = C^T\vec{X}
 \end{align}
 Where,
 \begin{align}
@@ -189,11 +189,12 @@ f(a_1) = f(a_2) = \cdots = f(a_n) = 0 \mbox{ for every } a_j \in \vec{W}
 \end{align}
 \begin{align}
 \implies c_1 - c_i = 0 \forall i= 2\cdots n\\
-\implies c_i = c_1 = c \forall i
+\implies c_i = c_1 = c \forall i\\
+\implies C = c\myvec{1\\\vdots\\1}
 \end{align}
 Hence,
 \begin{align}
-f\myvec{\vec{X}^T} = c\vec{x_1} + c\vec{x_2} + \cdots + c\vec{x_n}\\
+f\myvec{\vec{x_1},&\vec{x_2},\cdots ,\vec{x_n}} = C\vec{X}^T
 \end{align}
 \begin{align}
 \implies f\myvec{\vec{x_1},&\vec{x_2}&,\cdots &,\vec{x_n}} = c\sum_{j=1}^{n}\vec{x_j}
